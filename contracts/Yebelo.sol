@@ -61,4 +61,27 @@ contract Yebelo is ERC20, Ownable {
         
         return ERC20(_address).balanceOf(address(this));
     }
+
+    function assignSlab()public  {
+        uint amountDeposited=slabDetails[msg.sender].depositedAmount;
+        if (amountDeposited<=500 ){
+            slabDetails[msg.sender].slab=4;
+        }
+        else if (amountDeposited > 500 && amountDeposited <= 900){
+            slabDetails[msg.sender].slab=3;
+        }
+        else if (amountDeposited > 900 && amountDeposited <= 1200){
+            slabDetails[msg.sender].slab=2;
+        }
+        else if (amountDeposited > 1200 && amountDeposited <= 1400){
+            slabDetails[msg.sender].slab=1;
+        }
+        else if (amountDeposited > 1400 && amountDeposited <= 1500){
+            slabDetails[msg.sender].slab=0;
+        }
+
+        else slabDetails[msg.sender].slab=-1;            //Invalid value
+
+
+    }
 }
