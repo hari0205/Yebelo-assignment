@@ -5,10 +5,12 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 
 contract Yebelo is ERC20, Ownable {
-    uint[] Slab=[100,200,300,400,500];                  // Slab along with index
+    /* Tried for an additional feature to restrict deposits capacity is full
+    // uint[] Slab=[100,200,300,400,500];                  // Slab along with index
 
-    uint totalCapRemaining=Slab[4]+Slab[3]+Slab[2]+Slab[1]+Slab[0];                                 // Addition feature to check remaining capacity 
-    uint currentSlabcap=Slab[Slab.length-1];                            // if slab array is empty no more insertion is allowed
+    // uint totalCapRemaining=Slab[4]+Slab[3]+Slab[2]+Slab[1]+Slab[0];                                 // Addition feature to check remaining capacity 
+    // uint currentSlabcap=Slab[Slab.length-1];                            // if slab array is empty no more insertion is allowed
+    */
     uint public deposited=0;                    //Keep track of capacity
     //uint totalDeposited;  // For addition feature 
     uint lastTransfer;

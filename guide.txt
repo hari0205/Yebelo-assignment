@@ -1,0 +1,28 @@
+This is a smart contract to find the slab assigned.
+
+To test it manually without hardhat/Chai:
+- Copy paste Yebelo.sol into remix IDE.
+- Compile and Deploy the contract
+- Copy the address of the smart contract 
+- In the "transferToContract" function , pasted the address of the smart contract and the amount of tokens you'd like to transfer. Execute the function
+- After a successful transfer, copy the address of the wallet used to deploy the contract (mostly the address1)
+- Paste the address of the wallet copied in the previous step and run the function.
+- After a successful transfer, you can see the slab assigned.\
+
+To test with Chai:
+- Clone the repository. 
+- Open with your code editior.
+- Open terminal with your code editior.
+- Run npm install *
+- Run npx hadhat compile
+- Run npx hardhat test
+
+
+Features:
+- Mapped address to a struct so that it can be useful for displaying additional information at any time. Useful when extending 
+- Safety checks to ensure you don't query without sending tokens to contract address
+- Can transfer tokens between wallets on non smart contracts too.
+- Can check the slab of any address
+
+
+* Sometimes on some machines, you can run into dependancy issues. Delete the files , reclone the the repo and install hardhat waffle ethers separately to avoid errors. refer https://stackoverflow.com/questions/70628980/typeerror-cannot-read-properties-of-undefined-reading-getcontractfactory-wh

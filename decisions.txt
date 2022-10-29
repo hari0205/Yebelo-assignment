@@ -1,0 +1,6 @@
+Used Openzeppelin's ERC20 contract for easy development.
+- A struct that has a boolean condition to check if the address actually deposited to the smart contract , totalDeposit amount to keen track of slab and uint slab (not used string here because it is expensive)
+- Mapped struct to address to maake handling slabs easier.
+- Pre-minted tokens and sent 5000 to contract token and 3000 to account 0 token
+- A function to transfer tokens from any wallet to the smart contract. updates the amount of tokens transferred 
+- Calling the assign slab to calculate the slab and assign it to the struct which reflects on the address
