@@ -80,7 +80,7 @@ contract Yebelo is ERC20, Ownable {
             slabDetails[msg.sender].slab=0;
         }
 
-        else slabDetails[msg.sender].slab=-1;            //Invalid value
+                    //Invalid value
 
 
     }
